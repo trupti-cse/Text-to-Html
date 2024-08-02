@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - TexttoHtml</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+            padding: 50px 20px;
+            animation: fadeIn 1s ease-out;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .btn {
+            font-size: 1.1rem;
+            padding: 12px 24px;
+            margin: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff; /* Text color */
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+            transform: scale(1.1);
+        }
+        .btn-secondary {
+            background-color: #007bff; /* Same as btn-primary */
+            border-color: #007bff; /* Same as btn-primary */
+            color: #fff; /* Text color */
+        }
+        .btn-secondary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Introducing TexttoHtml: Your Ultimate Text to HTML Conversion Tool</h1>
+        <p>Transform your text into beautiful HTML with just one click! TexttoHtml is designed to make your web development process seamless and efficient. With this app, you can easily convert your plain text into HTML code, add images, and watch as the corresponding HTML code is generated instantly.</p>
+<!--             
+            <p>Key Features: <br>
+            
+            <strong>One-Click Conversion:</strong> Convert your text to HTML effortlessly with a single click, making web development faster and easier than ever.
+            Image Integration: Easily add images to your text, and the app will generate the necessary HTML code for you. <br>
+           <strong>History Tracking:</strong> Keep track of your conversions with the built-in history feature. You can easily review your past conversions, ensuring you never lose important data. <br>
+            <strong>History Management:</strong> Not only can you view your history, but you can also delete any entries you no longer need, keeping your workspace clean and organized.
+         <br> <em> Experience the convenience of converting text to HTML with the added functionality of image integration and history management</em> 
+             -->
+            Developed by Devadiga Trupti </p> <br>
+        <!-- <p>Developed by - Devadiga Trupti Uday</p> -->
+        <a href="{% url 'register' %}" class="btn btn-primary">Register</a>
+        <a href="{% url 'login' %}" class="btn btn-secondary">Login</a>
+    </div>
+
+    <!-- Bootstrap and Custom Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+     crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+     crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+     crossorigin="anonymous"></script>
+    <script>
+        // JavaScript animations
+        document.addEventListener('DOMContentLoaded', function() {
+            animateButtons();
+        });
+
+        function animateButtons() {
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('mouseover', function() {
+                    this.style.transform = 'scale(1.1)';
+                });
+                button.addEventListener('mouseout', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            background: #f0f2f5;
+        }
+        .dashboard {
+            padding: 50px;
+            text-align: center;
+            animation: zoomIn 0.5s ease-in-out;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .dashboard button {
+            margin: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">TexttoHtml</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'history' %}">History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <div class="dashboard">
+        <h1>Welcome to the Dashboard</h1>
+        <p>Transform your text into beautiful HTML with just one click! TexttoHtml is designed to make your web development process seamless and efficient. With this app, you can easily convert your plain text into HTML code, add images, and watch as the corresponding HTML code is generated instantly.</p>
+            
+           <h1> <p>Key Features: <br> </h1>
+            
+            <strong>One-Click Conversion:</strong> Convert your text to HTML effortlessly with a single click, making web development faster and easier than ever.
+            Image Integration: Easily add images to your text, and the app will generate the necessary HTML code for you. <br>
+           <strong>History Tracking:</strong> Keep track of your conversions with the built-in history feature. You can easily review your past conversions, ensuring you never lose important data. <br>
+            <strong>History Management:</strong> Not only can you view your history, but you can also delete any entries you no longer need, keeping your workspace clean and organized.
+         <br> <em> Experience the convenience of converting text to HTML with the added functionality of image integration and history management</em> 
+            
+            Developed by Devadiga Trupti </p> <br>
+        <a href="{% url 'convert_text' %}" class="btn btn-primary">Convert Text to HTML</a>
+    </div>
+
+    <!-- Bootstrap and Custom Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+     crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+     crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+     crossorigin="anonymous"></script>
+</body>
+</html>
